@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbYazOkuluDersKaydıModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblDersler">
+    <Key>
+      <PropertyRef Name="DersId" />
+    </Key>
+    <Property Name="DersId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OgrenciId" Type="int" Nullable="false" />
+    <Property Name="OgretmenAdi" Type="int" Nullable="false" />
+    <Property Name="DersAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="AlanAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kontenjan" Type="int" />
+    <Property Name="DersUcreti" Type="float" />
+    <Property Name="DersGuid" Type="uniqueidentifier" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+  </EntityType>
+  <EntityType Name="TblOgrenci">
+    <Key>
+      <PropertyRef Name="OgrenciId" />
+    </Key>
+    <Property Name="OgrenciId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OgrenciNumarasi" Type="bigint" />
+    <Property Name="OgrenciAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="OgrenciSoyadi" Type="nvarchar" MaxLength="50" />
+    <Property Name="OgrenciGuid" Type="uniqueidentifier" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+  </EntityType>
+  <EntityType Name="TblOgrenciDers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OgrenciId" Type="int" Nullable="false" />
+    <Property Name="DersId" Type="int" Nullable="false" />
+    <Property Name="DersAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="AlanAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kontenjan" Type="int" />
+    <Property Name="DersUcreti" Type="float" />
+    <Property Name="DersGuid" Type="uniqueidentifier" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DbYazOkuluDersKaydı.dbo.VwOgrenciDers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VwOgrenciDers">
+    <Key>
+      <PropertyRef Name="OgrenciId" />
+      <PropertyRef Name="OgretmenAdi" />
+    </Key>
+    <Property Name="OgrenciId" Type="int" Nullable="false" />
+    <Property Name="OgrenciNumarasi" Type="bigint" />
+    <Property Name="OgrenciAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="OgrenciSoyadi" Type="nvarchar" MaxLength="50" />
+    <Property Name="OgrenciGuid" Type="uniqueidentifier" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+    <Property Name="DersAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kontenjan" Type="int" />
+    <Property Name="DersUcreti" Type="float" />
+    <Property Name="DersGuid" Type="uniqueidentifier" />
+    <Property Name="OgretmenAdi" Type="int" Nullable="false" />
+    <Property Name="DersAdiBirlesik" Type="nvarchar" MaxLength="50" />
+    <Property Name="AlanAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="DbYazOkuluDersKaydıModelStoreContainer">
+    <EntitySet Name="TblDersler" EntityType="Self.TblDersler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblOgrenci" EntityType="Self.TblOgrenci" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblOgrenciDers" EntityType="Self.TblOgrenciDers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VwOgrenciDers" EntityType="Self.VwOgrenciDers" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VwOgrenciDers].[OgrenciId] AS [OgrenciId], 
+    [VwOgrenciDers].[OgrenciNumarasi] AS [OgrenciNumarasi], 
+    [VwOgrenciDers].[OgrenciAdi] AS [OgrenciAdi], 
+    [VwOgrenciDers].[OgrenciSoyadi] AS [OgrenciSoyadi], 
+    [VwOgrenciDers].[OgrenciGuid] AS [OgrenciGuid], 
+    [VwOgrenciDers].[KayitTarihi] AS [KayitTarihi], 
+    [VwOgrenciDers].[Aktif] AS [Aktif], 
+    [VwOgrenciDers].[Silik] AS [Silik], 
+    [VwOgrenciDers].[DersAdi] AS [DersAdi], 
+    [VwOgrenciDers].[Kontenjan] AS [Kontenjan], 
+    [VwOgrenciDers].[DersUcreti] AS [DersUcreti], 
+    [VwOgrenciDers].[DersGuid] AS [DersGuid], 
+    [VwOgrenciDers].[OgretmenAdi] AS [OgretmenAdi], 
+    [VwOgrenciDers].[DersAdiBirlesik] AS [DersAdiBirlesik], 
+    [VwOgrenciDers].[AlanAdi] AS [AlanAdi]
+    FROM [dbo].[VwOgrenciDers] AS [VwOgrenciDers]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

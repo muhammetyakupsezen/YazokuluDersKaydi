@@ -1,0 +1,21 @@
+﻿
+<h2>OgrenciDetay</h2>
+
+@{
+    ViewBag.Title = "OgrenciDetay";
+    Layout = "~/Views/Shared/_Main.cshtml";
+
+    YazOkuluDersKaydi.Data.TblOgrenci SeciliOgrenci = new YazOkuluDersKaydi.Data.TblOgrenci();
+
+    if (ViewBag.OgrenciDetay != null)
+    {
+        SeciliOgrenci = (YazOkuluDersKaydi.Data.TblOgrenci)ViewBag.OgrenciDetay;
+    }
+
+    <h4>  OgrenciAdi : @SeciliOgrenci.OgrenciAdi @SeciliOgrenci.OgrenciSoyadi    Ogrenci No : @SeciliOgrenci.OgrenciNumarasi </h4>
+
+
+}
+
+
+

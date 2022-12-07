@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Main.cshtml";
+
+    // ViewBag.OgrenciEkle
+
+ 
+}
+
+<h2>Add</h2>
+
+
+@{ using (Html.BeginForm("Add", "OgrenciIslemleri", FormMethod.Post))
+    {
+
+        <label for="TxtOgrenciAdi"> Ögrenci Adı : </label>
+        <input type="text" name="TxtOgrenciAdi" /> 
+        <br />
+        <label for="TxtOgrenciSoyAdi"> Ögrenci Adı : </label>
+        <input type="text" name="TxtOgrenciSoyAdi" />
+
+        <br />
+        <input type="submit" value="Ekle" />
+
+    }
+}
+
+@{ 
+    if (ViewBag.Message != null)
+    {
+    <span>Hata =  @ViewBag.Message.ToString();</span>
+    }
+
+}

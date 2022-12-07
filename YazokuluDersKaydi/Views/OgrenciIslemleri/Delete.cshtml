@@ -1,0 +1,44 @@
+﻿
+<h2>Delete</h2>
+
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Main.cshtml";
+
+    if (ViewBag.OgrenciListesi != null)
+    {
+        List<YazOkuluDersKaydi.Data.TblOgrenci> OgrenciListesi = new List<YazOkuluDersKaydi.Data.TblOgrenci>();
+
+
+        OgrenciListesi = (List<YazOkuluDersKaydi.Data.TblOgrenci>)ViewBag.OgrenciListesi;
+
+        using (Html.BeginForm("Delete", "OgrenciIslemleri", FormMethod.Post))
+            {
+
+                <label for="CmbOgrenciAdi"> Ogrenci Adı Seçiniz</label>
+                <select name="CmbOgrenciAdi">
+                    <option value="">Ogrenci Adı</option>
+
+                    @foreach (var ogr in OgrenciListesi)
+                    {
+                        <option value="@ogr.OgrenciId">@ogr.OgrenciAdi @ogr.OgrenciSoyadi @ogr.OgrenciNumarasi</option>
+
+                    }
+
+
+                </select>
+
+                <input type="submit" value="sil" />
+
+            }
+
+
+        
+
+    }
+
+
+
+
+} 

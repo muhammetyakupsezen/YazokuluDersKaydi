@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbYazOkuluDersKaydıModelStoreContainer" CdmEntityContainer="DbYazOkuluDersKaydıEntities2">
+    <EntitySetMapping Name="TblDersler">
+      <EntityTypeMapping TypeName="DbYazOkuluDersKaydıModel.TblDersler">
+        <MappingFragment StoreEntitySet="TblDersler">
+          <ScalarProperty Name="DersId" ColumnName="DersId" />
+          <ScalarProperty Name="OgrenciId" ColumnName="OgrenciId" />
+          <ScalarProperty Name="OgretmenAdi" ColumnName="OgretmenAdi" />
+          <ScalarProperty Name="DersAdi" ColumnName="DersAdi" />
+          <ScalarProperty Name="AlanAdi" ColumnName="AlanAdi" />
+          <ScalarProperty Name="Kontenjan" ColumnName="Kontenjan" />
+          <ScalarProperty Name="DersUcreti" ColumnName="DersUcreti" />
+          <ScalarProperty Name="DersGuid" ColumnName="DersGuid" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblOgrenci">
+      <EntityTypeMapping TypeName="DbYazOkuluDersKaydıModel.TblOgrenci">
+        <MappingFragment StoreEntitySet="TblOgrenci">
+          <ScalarProperty Name="OgrenciId" ColumnName="OgrenciId" />
+          <ScalarProperty Name="OgrenciNumarasi" ColumnName="OgrenciNumarasi" />
+          <ScalarProperty Name="OgrenciAdi" ColumnName="OgrenciAdi" />
+          <ScalarProperty Name="OgrenciSoyadi" ColumnName="OgrenciSoyadi" />
+          <ScalarProperty Name="OgrenciGuid" ColumnName="OgrenciGuid" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblOgrenciDers">
+      <EntityTypeMapping TypeName="DbYazOkuluDersKaydıModel.TblOgrenciDers">
+        <MappingFragment StoreEntitySet="TblOgrenciDers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OgrenciId" ColumnName="OgrenciId" />
+          <ScalarProperty Name="DersId" ColumnName="DersId" />
+          <ScalarProperty Name="DersAdi" ColumnName="DersAdi" />
+          <ScalarProperty Name="AlanAdi" ColumnName="AlanAdi" />
+          <ScalarProperty Name="Kontenjan" ColumnName="Kontenjan" />
+          <ScalarProperty Name="DersUcreti" ColumnName="DersUcreti" />
+          <ScalarProperty Name="DersGuid" ColumnName="DersGuid" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VwOgrenciDers">
+      <EntityTypeMapping TypeName="DbYazOkuluDersKaydıModel.VwOgrenciDers">
+        <MappingFragment StoreEntitySet="VwOgrenciDers">
+          <ScalarProperty Name="OgrenciId" ColumnName="OgrenciId" />
+          <ScalarProperty Name="OgrenciNumarasi" ColumnName="OgrenciNumarasi" />
+          <ScalarProperty Name="OgrenciAdi" ColumnName="OgrenciAdi" />
+          <ScalarProperty Name="OgrenciSoyadi" ColumnName="OgrenciSoyadi" />
+          <ScalarProperty Name="OgrenciGuid" ColumnName="OgrenciGuid" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+          <ScalarProperty Name="DersAdi" ColumnName="DersAdi" />
+          <ScalarProperty Name="Kontenjan" ColumnName="Kontenjan" />
+          <ScalarProperty Name="DersUcreti" ColumnName="DersUcreti" />
+          <ScalarProperty Name="DersGuid" ColumnName="DersGuid" />
+          <ScalarProperty Name="OgretmenAdi" ColumnName="OgretmenAdi" />
+          <ScalarProperty Name="DersAdiBirlesik" ColumnName="DersAdiBirlesik" />
+          <ScalarProperty Name="AlanAdi" ColumnName="AlanAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

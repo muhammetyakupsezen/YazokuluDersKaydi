@@ -1,0 +1,52 @@
+﻿<h2>Update</h2>
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_Main.cshtml";
+
+    if (ViewBag.OgrenciListesi != null)
+    {
+        List<YazOkuluDersKaydi.Data.TblOgrenci> OgrenciListesi = new List<YazOkuluDersKaydi.Data.TblOgrenci>();
+
+
+        OgrenciListesi = (List<YazOkuluDersKaydi.Data.TblOgrenci>)ViewBag.OgrenciListesi;
+
+        using (Html.BeginForm("Update", "OgrenciIslemleri", FormMethod.Post))
+        {
+
+            <label for="CmbOgrenciAdi"> Ogrenci seçiniz :  </label>
+            <select name="CmbOgrenciAdi">
+                <option value="">  Seçiniz </option>
+
+                @foreach (var ogr in OgrenciListesi)
+                {
+                    <option value="@ogr.OgrenciId">@ogr.OgrenciAdi @ogr.OgrenciSoyadi @ogr.OgrenciNumarasi</option>
+
+                }
+
+
+            </select>
+            <br />
+
+            <label for="TxtYeniOgrenciAdi"> Öğrenci Adı :        </label>
+            <input type="text" name="TxtYeniOgrenciAdi" />
+            <br />
+            <label for="TxtYeniOgrenciSoyadi"> Öğrenci Soyadı :  </label>
+            <input type="text" name="TxtYeniOgrenciSoyadi" />
+          
+
+            <input type="submit" value="Güncelle" />
+
+            }
+
+
+        }
+    }
+
+    @{ 
+        if (ViewBag.Message != null)
+        {
+        <span> Hata = @ViewBag.Message.ToStrring();    </span>    
+        }
+
+    }

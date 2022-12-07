@@ -1,0 +1,51 @@
+﻿<h2>Ögrenciler</h2>
+
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Main.cshtml";
+
+    if (ViewBag.OgrenciListesi != null)
+    {
+        List<YazOkuluDersKaydi.Data.TblOgrenci> OgrenciListesi = new List<YazOkuluDersKaydi.Data.TblOgrenci>();
+
+
+        OgrenciListesi = (List<YazOkuluDersKaydi.Data.TblOgrenci>)ViewBag.OgrenciListesi;
+
+
+        foreach (var Ogrenci in OgrenciListesi)
+        {
+            <div style=" border:solid 4px #808080  ; background-color: #b6dfed ; text-align: center ; font-size :medium  ">
+                <a href="~/OgrenciIslemleri/OgrenciDetay?OgrenciId=@Ogrenci.OgrenciId.ToString()">   @Ogrenci.OgrenciAdi @Ogrenci.OgrenciSoyadi @Ogrenci.OgrenciNumarasi </a>
+                <br />
+            </div>
+        }
+
+        <br />
+        <br />
+        <br />
+
+
+        <div style=" border:solid 4px #ec8080  ; background-color: #81daf1 ; text-align: center ;  font-size :medium ;  height : 15px; width :100% ;  padding-bottom : 20px  ">
+            <a href="~/OgrenciIslemleri/Add">Ögrenci Ekle |</a>
+            <a href="~/OgrenciIslemleri/Delete">Ögrenci Sil |</a>
+            <a href="~/OgrenciIslemleri/Update">Ögrenci Güncelle |</a>
+
+        </div>
+
+
+
+
+
+
+    }
+
+}
+
+
+
+
+
+
+

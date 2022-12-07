@@ -1,0 +1,12 @@
+C:\Users\ADMİN\Source\Repos\YazokuluDersKaydi\YazOkuluDersKaydi.Data\bin\Debug\YazOkuluDersKaydi.Data.dll.config
+C:\Users\ADMİN\Source\Repos\YazokuluDersKaydi\YazOkuluDersKaydi.Data\bin\Debug\YazOkuluDersKaydi.Data.dll
+C:\Users\ADMİN\Source\Repos\YazokuluDersKaydi\YazOkuluDersKaydi.Data\bin\Debug\YazOkuluDersKaydi.Data.pdb
+C:\Users\ADMİN\Source\Repos\YazokuluDersKaydi\YazOkuluDersKaydi.Data\bin\Debug\EntityFramework.dll
+C:\Users\ADMİN\Source\Repos\YazokuluDersKaydi\YazOkuluDersKaydi.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADMİN\Source\Repos\YazokuluDersKaydi\YazOkuluDersKaydi.Data\bin\Debug\EntityFramework.xml
+C:\Users\ADMİN\Source\Repos\YazokuluDersKaydi\YazOkuluDersKaydi.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADMİN\Source\Repos\YazokuluDersKaydi\YazOkuluDersKaydi.Data\obj\Debug\YazOkuluDersKaydi.Data.csproj.AssemblyReference.cache
+C:\Users\ADMİN\Source\Repos\YazokuluDersKaydi\YazOkuluDersKaydi.Data\obj\Debug\YazOkuluDersKaydi.Data.csproj.CoreCompileInputs.cache
+C:\Users\ADMİN\Source\Repos\YazokuluDersKaydi\YazOkuluDersKaydi.Data\obj\Debug\YazOkuluDersKaydi.Data.csproj.CopyComplete
+C:\Users\ADMİN\Source\Repos\YazokuluDersKaydi\YazOkuluDersKaydi.Data\obj\Debug\YazOkuluDersKaydi.Data.dll
+C:\Users\ADMİN\Source\Repos\YazokuluDersKaydi\YazOkuluDersKaydi.Data\obj\Debug\YazOkuluDersKaydi.Data.pdb
